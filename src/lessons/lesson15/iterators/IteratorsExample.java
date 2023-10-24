@@ -18,6 +18,9 @@ public class IteratorsExample {
             Integer nextValue = myIterator.next();
             System.out.println(nextValue);
         }
+        for (Integer i : myList) {
+            System.out.println(i);
+        }
 
     }
 
