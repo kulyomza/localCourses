@@ -31,7 +31,6 @@ public class LegalEntities extends Client {
             throw new NegativeBalanceExceptions();
         }
         if (getBalance() >= amount) {
-            double commission = amount * 0.01;
             super.withdrawals(amount * 1.01);
         }
     }

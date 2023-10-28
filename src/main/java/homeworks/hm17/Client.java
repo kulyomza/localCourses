@@ -8,7 +8,7 @@ public abstract class Client {
 
     private String clientName;
     private double balance;
-    private String operationInfo;
+
 
 
     public Client(String clientName, double balance) {
