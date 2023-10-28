@@ -1,6 +1,6 @@
 package lessons.lesson12.abstractExample;
 
-abstract class Car {
+abstract class  Car {
     private String typeFuel;
     public Car(String typeFuel){
         this.typeFuel = typeFuel;
