@@ -10,7 +10,7 @@ public class makeAnOrder {
         BurgerSize userSize = BurgerSize.valueOf(Burger.userSize().toUpperCase());
 
         System.out.println("Choose type of meet(Chicken, Beef, Fish): ");
-        MeatType userTypeofMeet = MeatType.valueOf(Burger.userTypeOfMeet().toUpperCase());
+        MeatType userTypeOfMeet = MeatType.valueOf(Burger.userTypeOfMeet().toUpperCase());
 
         List<Ingredient> ingredients = new ArrayList<>();
         String userIngredientInput;
@@ -23,9 +23,10 @@ public class makeAnOrder {
             Ingredient userIngredient = Ingredient.valueOf(userIngredientInput);
             ingredients.add(userIngredient);
         }
-        OrderCalculator orderBill = new OrderCalculator(userSize, userTypeofMeet, ingredients);
-        Burger order = new Burger(userSize, userTypeofMeet, ingredients, orderBill);
+        OrderCalculator orderBill = new OrderCalculator(userSize, userTypeOfMeet, ingredients);
+        Burger order = new Burger(userSize, userTypeOfMeet, ingredients);
         order.burgerInfo();
+
 
     }
 }

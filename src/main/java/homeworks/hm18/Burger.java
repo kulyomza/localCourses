@@ -8,14 +8,14 @@ public class Burger {
     private BurgerSize userSize;
     private MeatType userTypeOfMeet;
     private List<Ingredient> userIngredient;
-    private OrderCalculator totalPrice;
 
 
-    public Burger(BurgerSize userSize, MeatType userTypeOfMeet, List<Ingredient> userIngredient, OrderCalculator totalPrice) {
+
+    public Burger(BurgerSize userSize, MeatType userTypeOfMeet, List<Ingredient> userIngredient) {
         this.userSize = userSize;
         this.userTypeOfMeet = userTypeOfMeet;
         this.userIngredient = userIngredient;
-        this.totalPrice = totalPrice;
+
 
     }
 
@@ -65,7 +65,9 @@ public class Burger {
         for (Ingredient ingredients : userIngredient) {
             System.out.println(ingredients + " ");
         }
-        System.out.println("Total price is: " + totalPrice.totalPrice());
+
+        System.out.println("Total price is: " + OrderCalculator.totalPrice());
+
 
     }
 
