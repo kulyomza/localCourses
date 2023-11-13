@@ -1,0 +1,13 @@
+CSS:
+
+logo - img[alt='Rozetka Logo']
+catalog button - button[aria-label='Відкрити меню']
+micro on search - button[aria-label='Голосовий пошук']
+basket - .header-actions__component > button:first-child
+
+XPath:
+
+logo - //img[@alt='Rozetka Logo']
+catalog button - //button[@aria-label='Відкрити меню']
+micro on search - //button[@aria-label='Голосовий пошук']
+basket - (//button)[9]
