@@ -21,6 +21,7 @@ public class WebDriverInit {
         chromeOptions.addArguments("--disable-notifications");
         driver = new ChromeDriver(chromeOptions);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
     @AfterTest
     public void after(){
