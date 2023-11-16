@@ -1,4 +1,4 @@
-package homeWorkTests;
+package homeWorkTests.hm20;
 
 import initForWebDriver.WebDriverInit;
 import org.openqa.selenium.By;
