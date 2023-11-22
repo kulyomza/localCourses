@@ -39,10 +39,8 @@ public class TestTextOnPage extends WebDriverInit {
         List<String> listTabs = new ArrayList<>(tab);
         driver.switchTo().window(listTabs.get(1));
 
-        WebElement titleOfNewTab = webDriverWait.until(ExpectedConditions.elementToBeClickable(
-                By.xpath("//title[text()='Угода користувача | ROZETKA']")));
-        String title = titleOfNewTab.getText().trim();
-        softAssert.assertEquals(title, "Угода користувача | ROZETKA", "Titles doesn't equal");
+        String titleOfNewTab = driver.getTitle();
+        softAssert.assertEquals(titleOfNewTab, "Угода користувача | ROZETKA", "Titles doesn't equal");
 
         WebElement switchLanguage = webDriverWait.until(ExpectedConditions.elementToBeClickable(
                 By.xpath("//a[contains(@class, 'lang__link')]")));
