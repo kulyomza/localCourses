@@ -1,6 +1,7 @@
 package initForWebDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -19,7 +20,6 @@ public class WebDriverInit {
         WebDriverManager.chromedriver().setup();
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--disable-notifications");
-        chromeOptions.addArguments("--disable-blink-features=AutomationControlled");
         driver = new ChromeDriver(chromeOptions);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -27,5 +27,12 @@ public class WebDriverInit {
     @AfterTest
     public void after(){
         driver.quit();
+    }
+
+    public void changeCFCookie(String value){
+        Cookie cookie = new Cookie("cf_clearance",value);
+        driver.manage().deleteCookieNamed("cf_clearance");
+        driver.manage().addCookie(cookie);
+        driver.navigate().refresh();
     }
 }
