@@ -20,7 +20,7 @@ public class TestTextOnPage extends WebDriverInit {
 
 
     @Test
-    public void testText() throws InterruptedException {
+    public void testText(){
 
         SoftAssert softAssert = new SoftAssert();
 
@@ -45,8 +45,6 @@ public class TestTextOnPage extends WebDriverInit {
         List<String> listTabs = new ArrayList<>(tab);
         driver.switchTo().window(listTabs.get(1));
 
-
-       // sleep(30000);
 
         String titleOfNewTab = driver.getTitle();
         softAssert.assertEquals(titleOfNewTab, "Угода користувача | ROZETKA", "Titles doesn't equal");
