@@ -6,6 +6,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -14,10 +15,12 @@ import java.util.List;
 
 public class TestRozetkaPromo extends WebDriverInit {
 
+    final String EXPECTED_LABEL = "АКЦІЯ";
+
 
     @Test
     public void testPromotions(){
-        SoftAssert softAssert = new SoftAssert();
+
 
         driver.get("https://rozetka.com.ua/");
         changeCFCookie("GzMszry4I4_kjBc4hiPXecT.mvMjTvVjjCZ.77oB4UQ-1701020681-0-1-2a22b3c9.f0c85b7d.7d23ec29-0.2.1701020681");
@@ -29,9 +32,8 @@ public class TestRozetkaPromo extends WebDriverInit {
         WebElement promoLabel = webDriverWait.until(ExpectedConditions.elementToBeClickable(
                 By.xpath("(//span[contains(@class, 'promo-label_type_action') and contains(text(), 'АКЦІЯ')])[1]")));
         String promo = promoLabel.getText().trim();
-        softAssert.assertEquals(promo, "АКЦІЯ", "Product without promo label");
-        softAssert.assertAll();
-        promoLabel.isDisplayed();
+        Assert.assertEquals(promo, EXPECTED_LABEL, "Product without promo label");
+        Assert.assertTrue(promoLabel.isDisplayed(), "Promo Label isn't displayed");
 
 
     }
