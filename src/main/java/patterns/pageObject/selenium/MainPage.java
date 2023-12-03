@@ -1,18 +1,21 @@
 package patterns.pageObject.selenium;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class MainPage extends MainPageLocators implements ICartPage{
 
     private WebDriver driver;
 
-    public MainPage(WebDriver driver){
-        this.driver = driver;
-    }
+    private WebDriverWait webDriverWait;
 
-    public MainPage checkingCart(){
-        checkingCartI(driver);
-        return this;
+
+    public MainPage(WebDriver driver){
+        webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        this.driver = driver;
     }
 
     public MainPage typeTextInInputSearch(String text){
@@ -30,4 +33,10 @@ public class MainPage extends MainPageLocators implements ICartPage{
         return new SearchPage(driver);
 
     }
+    public LaptopsAndComputersCatalog selectCategoryFromSidebar(){
+        webDriverWait.until(ExpectedConditions.elementToBeClickable(computersCategory)).click();
+        return new LaptopsAndComputersCatalog(driver);
+    }
+
+
 }
