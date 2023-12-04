@@ -8,7 +8,7 @@ import patterns.pageObject.selenium.MainPage;
 
 public class TestAddProductToTheCart extends WebDriverInit {
 
-    final String URL = "https://rozetka.com.ua/";
+    final String URL = "https://rozetka.com.ua/ua/";
     final String EXPECTED_CART_COUNTER = "1";
     final String EXPECTED_PRODUCT_TITLE_IN_CART =
             "Ноутбук Lenovo IdeaPad Slim 5 16IAH8 (83BG001ARA) Cloud Grey / 16\" " +
@@ -18,7 +18,7 @@ public class TestAddProductToTheCart extends WebDriverInit {
     @Test
     public void testProductInCart(){
         driver.get(URL);
-        changeCFCookie("1JI7CsxA0ZIPKQhiB1SkYd8hLkmALmeSqyRSrasqLJU-1701624796-0-1-2a22b3c9.3b83d4b7.7d23ec29-0.2.1701624796");
+        changeCFCookie("iaokF07KgnV.NnNI0ycC6tQVpF9_SfhN.aSRUml.SxQ-1701679423-0-1-6bc3b921.7d7663c2.3cc2e6c1-0.2.1701679423");
 
     String firstProductTitleFromLaptopsListing = new MainPage(driver).selectCategoryFromSidebar()
             .openLaptopsProductListing()
