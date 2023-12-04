@@ -13,6 +13,7 @@ public class FirstPageObjectTest extends WebDriverInit {
     @Test
     public void firstTest() {
         driver.get(URL);
+        changeCFCookie("bNrPnMyAfR5iTZAczbybP41YBGXCgX7S6BbYuPeM6YY-1701603958-0-1-2a22b3c9.facf2c8d.7d23ec29-0.2.1701603958");
         String actualTitle = new MainPage(driver).typeTextInInputSearch("Mac").
                 clickBtnSearch().clickOnFirstProductTitle(0)
                 .getTitleText();
