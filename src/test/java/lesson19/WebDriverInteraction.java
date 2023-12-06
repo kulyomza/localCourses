@@ -1,6 +1,5 @@
 package lesson19;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,10 +13,9 @@ public class WebDriverInteraction {
     private WebDriver driver;
     @BeforeTest
     public void initDriver(){
-        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
     }
-    public void example(){
+    public void testExample(){
         WebElement inputSearch = driver.findElement(By.cssSelector(".someInputClass"));
         WebElement btnSearch = driver.findElement(By.xpath("//div[@btnSearch]"));
 
@@ -30,7 +28,5 @@ public class WebDriverInteraction {
         String colorBtn = btnSearch.getAttribute("color");
         String btnType = btnSearch.getText();
         boolean isDisplayBtnSearch = btnSearch.isDisplayed();
-
-
     }
 }
