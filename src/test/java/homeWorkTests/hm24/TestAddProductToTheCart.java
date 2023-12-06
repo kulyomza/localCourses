@@ -27,8 +27,5 @@ public class TestAddProductToTheCart extends WebDriverInit {
             .openCartPopup().checkingAddedProduct(EXPECTED_PRODUCT_TITLE_IN_CART);
 
         Assert.assertEquals( firstProductTitleFromLaptopsListing, EXPECTED_PRODUCT_TITLE_IN_CART, "Titles doesn't equal");
-
-
     }
-
 }

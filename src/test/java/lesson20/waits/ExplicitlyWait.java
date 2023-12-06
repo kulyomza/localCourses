@@ -1,6 +1,6 @@
 package lesson20.waits;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -20,7 +20,6 @@ public class ExplicitlyWait {
 
     @BeforeTest
     public void initDriver(){
-        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
