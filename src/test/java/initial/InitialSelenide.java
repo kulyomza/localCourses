@@ -1,13 +1,12 @@
-package WebDriverInitForSelenide;
+package initial;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
-public class SelenideWebDriverInit {
+public class InitialSelenide {
     @BeforeTest
     public void before(){
         ChromeOptions options = new ChromeOptions();
@@ -27,8 +26,5 @@ public class SelenideWebDriverInit {
         WebDriverRunner.getWebDriver().manage().deleteCookieNamed("cf_clearance");
         WebDriverRunner.getWebDriver().manage().addCookie(cookie);
     }
-    @AfterTest
-    public void after(){
 
-    }
 }

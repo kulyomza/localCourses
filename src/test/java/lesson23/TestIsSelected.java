@@ -1,6 +1,6 @@
 package lesson23;
 
-import initForWebDriver.WebDriverInit;
+import initial.WebDriverInit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;

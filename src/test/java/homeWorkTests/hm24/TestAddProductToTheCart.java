@@ -1,6 +1,6 @@
 package homeWorkTests.hm24;
 
-import initForWebDriver.WebDriverInit;
+import initial.WebDriverInit;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import patterns.pageObject.selenium.LaptopsListing;

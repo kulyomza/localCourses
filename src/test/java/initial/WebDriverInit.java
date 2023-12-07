@@ -1,4 +1,4 @@
-package initForWebDriver;
+package initial;
 
 
 import org.openqa.selenium.Cookie;
