@@ -1,8 +1,6 @@
 package lesson24;
 
-import initForWebDriver.WebDriverInit;
-import io.opentelemetry.api.trace.StatusCode;
-import org.apache.hc.core5.http.HttpConnection;
+import initial.WebDriverInit;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

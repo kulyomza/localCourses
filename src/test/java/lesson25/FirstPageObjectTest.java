@@ -1,6 +1,6 @@
 package lesson25;
 
-import initForWebDriver.WebDriverInit;
+import initial.WebDriverInit;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import patterns.pageObject.selenium.MainPage;

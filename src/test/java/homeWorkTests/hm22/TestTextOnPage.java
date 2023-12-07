@@ -1,8 +1,7 @@
 package homeWorkTests.hm22;
 
-import initForWebDriver.WebDriverInit;
+import initial.WebDriverInit;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
