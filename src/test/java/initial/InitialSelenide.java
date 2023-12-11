@@ -12,7 +12,7 @@ public class InitialSelenide {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--user-agent=some user agent");
         options.addArguments("--disable-notifications");
-        Configuration.browserSize = "1280x720";
+        Configuration.browserSize = "1280x820";
         Configuration.browserPosition = "0x0";
         Configuration.timeout = 10000;
         Configuration.browserCapabilities = options;
@@ -22,7 +22,7 @@ public class InitialSelenide {
 
         Cookie cookie = new Cookie
                 ("cf_clearance",
-                        "dW3k4I6DTfwb0ewLTU1ZdBItthOm.MjY3BZbys7i6l0-1701766750-0-1-6bc3b921.5818d792.3cc2e6c1-0.2.1701766750");
+                        "qMVG4EbmTavyakgf469R7wP.QJswWp1.pHAUShex1J8-1702129305-0-1-7a105317.4ee41f07.2d110cf7-0.2.1702129305");
         WebDriverRunner.getWebDriver().manage().deleteCookieNamed("cf_clearance");
         WebDriverRunner.getWebDriver().manage().addCookie(cookie);
     }
