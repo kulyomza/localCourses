@@ -1,6 +1,7 @@
 package homeWorkTests.hm26;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -19,15 +20,8 @@ public class LauncherPerson {
         personList.add(new Person("lisa", 21));
         personList.add(new Person("Natan", 44));
 
-        PersonNameComparator comparatorByName = new PersonNameComparator();
-
-        personList.stream().filter(x->x.getAge() > 25).sorted(comparatorByName)
+        personList.stream().filter(x->x.getAge() > 25).sorted(Comparator.comparing(Person::getName))
                         .map(x->x.getName() + " " + x.getAge()).forEach(System.out::println);
-
-
-
-
-
 
     }
 }
