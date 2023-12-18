@@ -18,6 +18,7 @@ public class InitialSelenide {
         Configuration.browserCapabilities = options;
     }
 
+
     public void rozetkaCFCookie(String value){
 
         Cookie cookie = new Cookie
