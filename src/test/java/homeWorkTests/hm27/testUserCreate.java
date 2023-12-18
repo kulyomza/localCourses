@@ -27,7 +27,7 @@ public class testUserCreate {
                 .body("id", notNullValue())
                 .body("createdAt", notNullValue())
                 .log().all()
-                .extract().as((Type) SuccessUserCreate.class);
+                .extract().as(SuccessUserCreate.class);
         Assert.assertEquals(userCreate.getName(), successUserCreate.getName());
         Assert.assertEquals(userCreate.getJob(), successUserCreate.getJob());
     }
